@@ -4,6 +4,7 @@ require_relative 'differentiator'
 
 describe :test_data do
 
+  # a proc that returns a proc, not how I want it but only way to get this to be dry
   subject { proc {|input| Differentiator.new(input).result }}
 
   it "expects result to be 6x+2" do
